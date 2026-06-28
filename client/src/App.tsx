@@ -46,6 +46,17 @@ function AppContent() {
   );
 }
 
+function VersionBadge() {
+  return (
+    <div
+      className="fixed bottom-2 right-2 z-50 select-none rounded-full bg-muted/70 px-2 py-0.5 text-[10px] font-medium text-muted-foreground backdrop-blur-sm pointer-events-none"
+      data-testid="version-badge"
+    >
+      v{__APP_VERSION__}
+    </div>
+  );
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -54,6 +65,7 @@ function App() {
           <AppContent />
         </AuthProvider>
         <Toaster />
+        <VersionBadge />
       </TooltipProvider>
     </QueryClientProvider>
   );

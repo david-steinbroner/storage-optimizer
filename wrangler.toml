@@ -1,0 +1,6 @@
+name = "storage-optimizer"
+compatibility_date = "2025-11-10"
+pages_build_output_dir = "dist"
+
+# Cloudflare Pages configuration
+[env.production]

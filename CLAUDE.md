@@ -15,7 +15,7 @@ Other scripts: `npm start` (prod: `node dist/index.js`), `npm run build:server` 
 Ask before committing (see ../CLAUDE.md). No project deltas.
 
 ## Version tag
-Source: package.json `version` (1.0.0)  •  Shown in UI: not shown yet — no rendered version tag found in `client/src`. Add a visible version tag per ../CLAUDE.md on the next meaningful change.
+Source: package.json `version` (1.1.0), injected at build time via Vite `define` (`__APP_VERSION__` in `vite.config.ts`)  •  Shown in UI: `VersionBadge` in `client/src/App.tsx` — fixed bottom-right `v{version}` badge.
 
 ## Project-specific rules & overrides
 - Monorepo layout: `client/` (React/Vite frontend), `server/` (Express + tsx entry `server/index.ts`), `shared/` (shared types/Drizzle schema), `data/` + `config/` + `i18n/` (copied into `dist/` at build time — keep the build script's copy steps in sync if you add similar dirs).
