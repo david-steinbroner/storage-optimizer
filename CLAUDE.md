@@ -11,9 +11,6 @@ Standards: inherits ../engineering-standards.md. Overrides & project-specifics b
 
 Other scripts: `npm start` (prod: `node dist/index.js`), `npm run build:server` (esbuild server bundle), `npm run db:push` (`drizzle-kit push`), `npm run simulate`, `npm run report`, `npm run pages:deploy` (`npm run build && wrangler pages deploy dist`).
 
-## Commit protocol
-Ask before committing (see ../CLAUDE.md). No project deltas.
-
 ## Version tag
 Source: package.json `version` (1.1.0), injected at build time via Vite `define` (`__APP_VERSION__` in `vite.config.ts`)  •  Shown in UI: `VersionBadge` in `client/src/App.tsx` — fixed bottom-right `v{version}` badge.
 
